@@ -6,7 +6,7 @@
   <link href="https://github.com/LitteWill/GameWill.github.io.git/atom.xml" rel="self"/>
   
   <link href="https://github.com/LitteWill/GameWill.github.io.git/"/>
-  <updated>2021-12-05T11:47:13.715Z</updated>
+  <updated>2021-12-05T14:49:44.065Z</updated>
   <id>https://github.com/LitteWill/GameWill.github.io.git/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://github.com/LitteWill/GameWill.github.io.git/2021/12/05/Erlang%E5%B8%B8%E8%A7%81%E8%BF%90%E8%A1%8C%E6%97%B6%E9%94%99%E8%AF%AF/"/>
+    <id>https://github.com/LitteWill/GameWill.github.io.git/2021/12/05/Erlang%E5%B8%B8%E8%A7%81%E8%BF%90%E8%A1%8C%E6%97%B6%E9%94%99%E8%AF%AF/</id>
+    <published>2021-12-05T14:50:08.761Z</published>
+    <updated>2021-12-05T14:49:44.065Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Erlang常见运行时错误"><a href="#Erlang常见运行时错误" class="headerlink" title="Erlang常见运行时错误"></a>Erlang常见运行时错误</h1><figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">%% 参数类型错误，传入函数的参数和函数声明要求的参数类型不匹配。</span></span><br><span class="line">badarg</span><br><span class="line"></span><br><span class="line"><span class="comment">%% arith，atithmetic的简写，运算错误，例如将一个整数和一个atom相加。</span></span><br><span class="line">badarith</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 模式匹配错误</span></span><br><span class="line">&#123;badmatch, V&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 该错误信息表示找不到匹配的函数。例如，定义一个函数test:add/2，接收两个整数，并返回它们的和。如果传入小数，将找不到匹配的分支，会抛出function_clause。</span></span><br><span class="line">function_clause</span><br><span class="line"></span><br><span class="line"><span class="comment">%% case表达式找不到匹配的分支。一般要把“_”加到最后的分支中，作为容错或者其它。</span></span><br><span class="line">&#123;case_clause, V&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">%% Erlang中if表达式是case表达式的一种特殊方式，要求至少有一个分支测试条件的结果为true，否则会引发错误。</span></span><br><span class="line">if_clause</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 调用未定义的函数或者模块时，返回该错误信息。</span></span><br><span class="line">undef</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 进程不存在，例如gen_server:call一个不存在的进程。</span></span><br><span class="line">noproc</span><br><span class="line"></span><br><span class="line">Pid = pid(<span class="number">0</span>, <span class="number">100</span>, <span class="number">10</span>).</span><br><span class="line">gen_server:call(Pid, test).</span><br><span class="line">** exception exit: &#123;noproc,&#123;gen_server,call,[&lt;<span class="number">0.100</span>.<span class="number">10</span>&gt;,test]&#125;&#125;</span><br><span class="line">in function gen_server:call/<span class="number">2</span> (gen_server.erl, line <span class="number">182</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">%% 超出系统上限，如atom，ets，port，process等。                                                </span></span><br><span class="line">system_limit</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Erlang常见运行时错误&quot;&gt;&lt;a href=&quot;#Erlang常见运行时错误&quot; class=&quot;headerlink&quot; title=&quot;Erlang常见运行时错误&quot;&gt;&lt;/a&gt;Erlang常见运行时错误&lt;/h1&gt;&lt;figure class=&quot;highlight erla</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>my-first-blog</title>
