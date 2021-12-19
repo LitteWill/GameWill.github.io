@@ -35,7 +35,7 @@
 <meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9zdGF0aWMwMDEuaW5mb3EuY24vcmVzb3VyY2UvaW1hZ2UvMzkvZWEvMzkzNDIxMDJjZjI0YTE5MjBkODY4ODQ0YmI3YmQ2ZWEuanBn">
 <meta property="og:image" content="https://github.com/LitteWill/GameWill.github.io.git/2021/12/11/Actor%E6%A8%A1%E5%9E%8B/image/image_1.png">
 <meta property="article:published_time" content="2021-12-11T11:47:13.000Z">
-<meta property="article:modified_time" content="2021-12-19T15:03:24.835Z">
+<meta property="article:modified_time" content="2021-12-19T15:20:25.893Z">
 <meta property="article:author" content="Little Will">
 <meta property="article:tag" content="Actor模型">
 <meta property="article:tag" content="线程安全">
@@ -254,7 +254,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2021-12-19 23:03:24" itemprop="dateModified" datetime="2021-12-19T23:03:24+08:00">2021-12-19</time>
+      <time title="Modified: 2021-12-19 23:20:25" itemprop="dateModified" datetime="2021-12-19T23:20:25+08:00">2021-12-19</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -277,7 +277,7 @@
     
     <div class="post-body" itemprop="articleBody">
         <blockquote>
-<p>Gul Agha提出了两个论点:<br>一个Actor对象可以创建其他Actor对象；<br>一个顺序进程无法创建其他顺序进程。<br>这两个论点并非贬低顺序程序的作用。而且也不是说，一个顺序进程无法执行其他顺序进程（数十年的主流开发经验已经证明了这一点）。但是，顺序进程仍旧是静态的，而且只能完成专门化的任务。与此相比，在高动态环境（在这种环境中可以根据需要创建和删除Actor对象，甚至可以在运行程序时，根据领域或操作环境需求更改Actor对象的行为）中，Actor 模型既可以利用顺序编程技巧，也可以利用函数编程技巧。换言之，响应式系统不仅拥有并发性和分布性，而且还拥有弹性、动态性、响应性和韧性。</p>
+<p>Gul Agha提出了两个论点:一个Actor对象可以创建其他Actor对象；一个顺序进程无法创建其他顺序进程。<br>这两个论点并非贬低顺序程序的作用。而且也不是说，一个顺序进程无法执行其他顺序进程（数十年的主流开发经验已经证明了这一点）。但是，顺序进程仍旧是静态的，而且只能完成专门化的任务。与此相比，在高动态环境（在这种环境中可以根据需要创建和删除Actor对象，甚至可以在运行程序时，根据领域或操作环境需求更改Actor对象的行为）中，Actor 模型既可以利用顺序编程技巧，也可以利用函数编程技巧。换言之，响应式系统不仅拥有并发性和分布性，而且还拥有弹性、动态性、响应性和韧性。</p>
 </blockquote>
 <span id="more"></span>
 <h1 id="Actor模型"><a href="#Actor模型" class="headerlink" title="Actor模型"></a>Actor模型</h1><h1 id="Actor-模型的起源"><a href="#Actor-模型的起源" class="headerlink" title="Actor 模型的起源"></a>Actor 模型的起源</h1><p>Actor 模型是一种用于处理并发计算的数学模型，它将Actor 对象用作并发计算的通用基元。与其他计算模型不同，发明Actor模型的灵感源于物理学理论，如广义相对论和量子力学。<br>可以将Actor 模型视为创建响应式应用程序的手段之一。使用这种具体的响应式软件开发方法，可以细致地处理响应式应用程序的主要方面：响应性、韧性、弹性和消息驱动性。它通过消息传递方式实现这四个方面的功能。<br>Carl Hewitt 博士是Actor 软件开发模型的发明者，他为研究该模型投入了数十年时间。Carl Hewitt 博士发现某些计算问题需要使用并发和分布模式解决，但他在做这项研究时第一台晶体管计算机仅出现了14 年，还不存在多核处理器。在1973年，功能最强大的Intel 处理器仅含有4000 至5000 个晶体管，其主频还没有超过1MHz。Carl Hewitt 博士在研究Actor 模型时，能够使用的功能最强大的处理器。处理器的硬件能力无法将Carl Hewitt 提出的理论付诸实践。因此，当时分布式和并行系统知识的理论模型与现实情况不匹配。<br><img src="image/image.png"><br><strong>1973 年左右功能最强大的处理器</strong> </p>

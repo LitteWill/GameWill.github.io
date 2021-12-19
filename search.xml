@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Erlang常见运行时错误</title>
+    <url>/GameWill.github.io/2021/12/05/Erlang%E5%B8%B8%E8%A7%81%E8%BF%90%E8%A1%8C%E6%97%B6%E9%94%99%E8%AF%AF/</url>
+    <content><![CDATA[<p>Erlang常见运行时错误</p>
+<span id="more"></span>
+
+<h1 id="Erlang常见运行时错误"><a href="#Erlang常见运行时错误" class="headerlink" title="Erlang常见运行时错误"></a>Erlang常见运行时错误</h1><p>%% 参数类型错误，传入函数的参数和函数声明要求的参数类型不匹配。<br>badarg</p>
+<p>%% arith，atithmetic的简写，运算错误，例如将一个整数和一个atom相加。<br>badarith</p>
+<p>%% 模式匹配错误<br>{badmatch, V}</p>
+<p>%% 该错误信息表示找不到匹配的函数。例如，定义一个函数test:add/2，接收两个整数，并返回它们的和。如果传入小数，将找不到匹配的分支，会抛出function_clause。<br>function_clause</p>
+<p>%% case表达式找不到匹配的分支。一般要把“_”加到最后的分支中，作为容错或者其它。<br>{case_clause, V}</p>
+<p>%% Erlang中if表达式是case表达式的一种特殊方式，要求至少有一个分支测试条件的结果为true，否则会引发错误。<br>if_clause</p>
+<p>%% 调用未定义的函数或者模块时，返回该错误信息。<br>undef</p>
+<p>%% 进程不存在，例如gen_server:call一个不存在的进程。<br>noproc</p>
+<p>Pid = pid(0, 100, 10).<br>gen_server:call(Pid, test).<br>** exception exit: {noproc,{gen_server,call,[&lt;0.100.10&gt;,test]}}<br>in function gen_server:call/2 (gen_server.erl, line 182)</p>
+<p>%% 超出系统上限，如atom，ets，port，process等。<br>system_limit</p>
+]]></content>
+      <categories>
+        <category>Erlang</category>
+        <category>Error</category>
+      </categories>
+      <tags>
+        <tag>Erlang</tag>
+        <tag>Error</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Actor模型</title>
     <url>/GameWill.github.io/2021/12/11/Actor%E6%A8%A1%E5%9E%8B/</url>
     <content><![CDATA[<blockquote>
-<p>Gul Agha提出了两个论点:<br>一个Actor对象可以创建其他Actor对象；<br>一个顺序进程无法创建其他顺序进程。<br>这两个论点并非贬低顺序程序的作用。而且也不是说，一个顺序进程无法执行其他顺序进程（数十年的主流开发经验已经证明了这一点）。但是，顺序进程仍旧是静态的，而且只能完成专门化的任务。与此相比，在高动态环境（在这种环境中可以根据需要创建和删除Actor对象，甚至可以在运行程序时，根据领域或操作环境需求更改Actor对象的行为）中，Actor 模型既可以利用顺序编程技巧，也可以利用函数编程技巧。换言之，响应式系统不仅拥有并发性和分布性，而且还拥有弹性、动态性、响应性和韧性。</p>
+<p>Gul Agha提出了两个论点:一个Actor对象可以创建其他Actor对象；一个顺序进程无法创建其他顺序进程。<br>这两个论点并非贬低顺序程序的作用。而且也不是说，一个顺序进程无法执行其他顺序进程（数十年的主流开发经验已经证明了这一点）。但是，顺序进程仍旧是静态的，而且只能完成专门化的任务。与此相比，在高动态环境（在这种环境中可以根据需要创建和删除Actor对象，甚至可以在运行程序时，根据领域或操作环境需求更改Actor对象的行为）中，Actor 模型既可以利用顺序编程技巧，也可以利用函数编程技巧。换言之，响应式系统不仅拥有并发性和分布性，而且还拥有弹性、动态性、响应性和韧性。</p>
 </blockquote>
 <span id="more"></span>
 <h1 id="Actor模型"><a href="#Actor模型" class="headerlink" title="Actor模型"></a>Actor模型</h1><h1 id="Actor-模型的起源"><a href="#Actor-模型的起源" class="headerlink" title="Actor 模型的起源"></a>Actor 模型的起源</h1><p>Actor 模型是一种用于处理并发计算的数学模型，它将Actor 对象用作并发计算的通用基元。与其他计算模型不同，发明Actor模型的灵感源于物理学理论，如广义相对论和量子力学。<br>可以将Actor 模型视为创建响应式应用程序的手段之一。使用这种具体的响应式软件开发方法，可以细致地处理响应式应用程序的主要方面：响应性、韧性、弹性和消息驱动性。它通过消息传递方式实现这四个方面的功能。<br>Carl Hewitt 博士是Actor 软件开发模型的发明者，他为研究该模型投入了数十年时间。Carl Hewitt 博士发现某些计算问题需要使用并发和分布模式解决，但他在做这项研究时第一台晶体管计算机仅出现了14 年，还不存在多核处理器。在1973年，功能最强大的Intel 处理器仅含有4000 至5000 个晶体管，其主频还没有超过1MHz。Carl Hewitt 博士在研究Actor 模型时，能够使用的功能最强大的处理器。处理器的硬件能力无法将Carl Hewitt 提出的理论付诸实践。因此，当时分布式和并行系统知识的理论模型与现实情况不匹配。<br><img src="image/image.png"><br><strong>1973 年左右功能最强大的处理器</strong> </p>
@@ -77,32 +103,6 @@
       <tags>
         <tag>Actor模型</tag>
         <tag>线程安全</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Erlang常见运行时错误</title>
-    <url>/GameWill.github.io/2021/12/05/Erlang%E5%B8%B8%E8%A7%81%E8%BF%90%E8%A1%8C%E6%97%B6%E9%94%99%E8%AF%AF/</url>
-    <content><![CDATA[<p>Erlang常见运行时错误</p>
-<span id="more"></span>
-
-<h1 id="Erlang常见运行时错误"><a href="#Erlang常见运行时错误" class="headerlink" title="Erlang常见运行时错误"></a>Erlang常见运行时错误</h1><p>%% 参数类型错误，传入函数的参数和函数声明要求的参数类型不匹配。<br>badarg</p>
-<p>%% arith，atithmetic的简写，运算错误，例如将一个整数和一个atom相加。<br>badarith</p>
-<p>%% 模式匹配错误<br>{badmatch, V}</p>
-<p>%% 该错误信息表示找不到匹配的函数。例如，定义一个函数test:add/2，接收两个整数，并返回它们的和。如果传入小数，将找不到匹配的分支，会抛出function_clause。<br>function_clause</p>
-<p>%% case表达式找不到匹配的分支。一般要把“_”加到最后的分支中，作为容错或者其它。<br>{case_clause, V}</p>
-<p>%% Erlang中if表达式是case表达式的一种特殊方式，要求至少有一个分支测试条件的结果为true，否则会引发错误。<br>if_clause</p>
-<p>%% 调用未定义的函数或者模块时，返回该错误信息。<br>undef</p>
-<p>%% 进程不存在，例如gen_server:call一个不存在的进程。<br>noproc</p>
-<p>Pid = pid(0, 100, 10).<br>gen_server:call(Pid, test).<br>** exception exit: {noproc,{gen_server,call,[&lt;0.100.10&gt;,test]}}<br>in function gen_server:call/2 (gen_server.erl, line 182)</p>
-<p>%% 超出系统上限，如atom，ets，port，process等。<br>system_limit</p>
-]]></content>
-      <categories>
-        <category>Erlang</category>
-        <category>Error</category>
-      </categories>
-      <tags>
-        <tag>Erlang</tag>
-        <tag>Error</tag>
       </tags>
   </entry>
   <entry>
