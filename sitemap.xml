@@ -56,20 +56,6 @@
 
   
   <url>
-    <loc>https://github.com/LitteWill/GameWill.github.io.git/tags/Erlang/</loc>
-    <lastmod>2021-12-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://github.com/LitteWill/GameWill.github.io.git/tags/Error/</loc>
-    <lastmod>2021-12-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://github.com/LitteWill/GameWill.github.io.git/tags/Actor%E6%A8%A1%E5%9E%8B/</loc>
     <lastmod>2021-12-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -83,17 +69,31 @@
     <priority>0.2</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://github.com/LitteWill/GameWill.github.io.git/categories/Erlang/</loc>
+    <loc>https://github.com/LitteWill/GameWill.github.io.git/tags/Erlang/</loc>
     <lastmod>2021-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
+    <loc>https://github.com/LitteWill/GameWill.github.io.git/tags/Error/</loc>
+    <lastmod>2021-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+
+  
+  <url>
     <loc>https://github.com/LitteWill/GameWill.github.io.git/categories/Actor%E6%A8%A1%E5%9E%8B/</loc>
+    <lastmod>2021-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://github.com/LitteWill/GameWill.github.io.git/categories/Erlang/</loc>
     <lastmod>2021-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
