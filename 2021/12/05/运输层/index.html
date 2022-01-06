@@ -117,7 +117,7 @@
 <meta property="og:image" content="https://github.com/LitteWill/GameWill.github.io.git/2021/12/05/%E8%BF%90%E8%BE%93%E5%B1%82/image/image_87.png">
 <meta property="og:image" content="https://github.com/LitteWill/GameWill.github.io.git/2021/12/05/%E8%BF%90%E8%BE%93%E5%B1%82/image/image_88.png">
 <meta property="article:published_time" content="2021-12-05T13:30:10.000Z">
-<meta property="article:modified_time" content="2022-01-06T17:27:39.226Z">
+<meta property="article:modified_time" content="2022-01-06T17:39:03.309Z">
 <meta property="article:author" content="Little Will">
 <meta property="article:tag" content="计算机网络">
 <meta property="article:tag" content="运输层">
@@ -336,7 +336,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-01-07 01:27:39" itemprop="dateModified" datetime="2022-01-07T01:27:39+08:00">2022-01-07</time>
+      <time title="Modified: 2022-01-07 01:39:03" itemprop="dateModified" datetime="2022-01-07T01:39:03+08:00">2022-01-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -385,9 +385,9 @@
 <p>端口号只具有本地意义，即端口号只是为了表示计算机应用层中的个进程，在因特网中，不同计算机中的相同端口号是没有联系的。</p>
 <p><img src="image/image_3.png" alt="image_3"></p>
 <h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><p><img src="image/image_4.png" alt="image_4"></p>
-<p>用户PC，DNS服务器，Web服务器通过交换机进行互联，他们处于同一个以太网中。假设这是Web服务器的域名，DNS服务器中记录有该域名所对应的IP地址。我们在用户PC中使用网页浏览器访问Web服务器的内容。在网页浏览器的地址栏中输入Web服务器域名，用户PC中的DNS客户端进程会发送一个DDNS查询请求报文，其内容为“域名<a href="http://www.porttest.com所对应的IP地址是什么？”DNS查询请求报文需要使用运输层的UDP协议，封装成UDP用户数据报，其首部中的源端口字段的值，在短暂端口号49151~65535中挑选一个未被占用的，用来表示DNS客户端进程，例如49152。目的端口字段的值设置为53（DNS服务器端进程所使用的熟知端口号）。">www.porttest.com所对应的IP地址是什么？”DNS查询请求报文需要使用运输层的UDP协议，封装成UDP用户数据报，其首部中的源端口字段的值，在短暂端口号49151~65535中挑选一个未被占用的，用来表示DNS客户端进程，例如49152。目的端口字段的值设置为53（DNS服务器端进程所使用的熟知端口号）。</a></p>
+<p>用户PC，DNS服务器，Web服务器通过交换机进行互联，他们处于同一个以太网中。假设这是Web服务器的域名，DNS服务器中记录有该域名所对应的IP地址。我们在用户PC中使用网页浏览器访问Web服务器的内容。在网页浏览器的地址栏中输入Web服务器域名，用户PC中的DNS客户端进程会发送一个DDNS查询请求报文，其内容为(域名<a href="http://www.porttest.com所对应的IP地址是什么？),DNS查询请求报文需要使用运输层的UDP协议，封装成UDP用户数据报，其首部中的源端口字段的值，在短暂端口号49151~65535中挑选一个未被占用的，用来表示DNS客户端进程，例如49152。目的端口字段的值设置为53（DNS服务器端进程所使用的熟知端口号）。">www.porttest.com所对应的IP地址是什么？),DNS查询请求报文需要使用运输层的UDP协议，封装成UDP用户数据报，其首部中的源端口字段的值，在短暂端口号49151~65535中挑选一个未被占用的，用来表示DNS客户端进程，例如49152。目的端口字段的值设置为53（DNS服务器端进程所使用的熟知端口号）。</a></p>
 <p><img src="image/image_5.png" alt="image_5"></p>
-<p>之后将UDP用户数据报封装在IP数据报中，通过以太网发送给DNS服务器，DNS服务器收到该数据报后，从中解封出UDP用户数据报。UDP首部中的目的端口号为53，这表明应将该UDP用户数据报的数据载荷部分，也就是DNS查询请求报文交付给本服务器中的DNS服务器端进程。DNS服务器端进程解析DNS查询请求报文内容，然后按其要求查找对应的IP地址。之后，会给用户PC发送DNS响应报文，其内容为“域名<a target="_blank" rel="noopener" href="http://www.porttest.com所对应的ip地址是192.168.0.3”.dns响应报文需要使用运输层的udp协议封装成udp用户数据报,其首部中源端口字段的值设置为熟知端口号53,表明这是dns服务器端进程所发送的udp用户数据报;目的端口字段的值设置为49152,这是之前用户pc中发送dns查询请求报文的dns客户端进程所使用的短暂端口号./">www.porttest.com所对应的IP地址是192.168.0.3”。DNS响应报文需要使用运输层的UDP协议封装成UDP用户数据报，其首部中源端口字段的值设置为熟知端口号53，表明这是DNS服务器端进程所发送的UDP用户数据报；目的端口字段的值设置为49152，这是之前用户PC中发送DNS查询请求报文的DNS客户端进程所使用的短暂端口号。</a></p>
+<p>之后将UDP用户数据报封装在IP数据报中，通过以太网发送给DNS服务器，DNS服务器收到该数据报后，从中解封出UDP用户数据报。UDP首部中的目的端口号为53，这表明应将该UDP用户数据报的数据载荷部分，也就是DNS查询请求报文交付给本服务器中的DNS服务器端进程。DNS服务器端进程解析DNS查询请求报文内容，然后按其要求查找对应的IP地址。之后，会给用户PC发送DNS响应报文，其内容为(域名<a target="_blank" rel="noopener" href="http://www.porttest.com所对应的ip地址是192.168.0.3).dns响应报文需要使用运输层的udp协议封装成udp用户数据报,其首部中源端口字段的值设置为熟知端口号53,表明这是dns服务器端进程所发送的udp用户数据报;目的端口字段的值设置为49152,这是之前用户pc中发送dns查询请求报文的dns客户端进程所使用的短暂端口号./">www.porttest.com所对应的IP地址是192.168.0.3)。DNS响应报文需要使用运输层的UDP协议封装成UDP用户数据报，其首部中源端口字段的值设置为熟知端口号53，表明这是DNS服务器端进程所发送的UDP用户数据报；目的端口字段的值设置为49152，这是之前用户PC中发送DNS查询请求报文的DNS客户端进程所使用的短暂端口号。</a></p>
 <p><img src="image/image_6.png" alt="image_6"></p>
 <p>之后，将UDP用户数据报封装在IP数据报中，通过以太网发送给用户PC。用户PC收到该数据报后，从中解封出UDP用户数据报。UDP首部汇总的目的端口号为49152，这表明应将该UDP用户数据报的数据载荷部分也就是DNS响应报文交付给用户PC中的DNS客户端进程。DNS客户端进程解析DNS响应报文的内容，就可知道自己之前所请求的Web服务器的域名所对应的IP地址为192.168.0.3。</p>
 <p><img src="image/image_7.png" alt="image_7"></p>
