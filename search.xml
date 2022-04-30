@@ -81,7 +81,7 @@
   </entry>
   <entry>
     <title>物理层</title>
-    <url>/GameWill.github.io/2021/11/28/%E7%89%A9%E7%90%86%E5%B1%82/</url>
+    <url>/GameWill.github.io/2021/11/29/%E7%89%A9%E7%90%86%E5%B1%82/</url>
     <content><![CDATA[<hr>
 <blockquote>
 <p>物理层解决在各种传输媒体上传输比特0和1的问题，进而给数据链路层提供透明传输比特流的服务。“透明”是指数据链路层看不见，无需看见物理层究竟使用的是什么方法来传输比特0和1的。它只管享受物理层提供的比特流传输服务即可。物理层为了解决在各种传输媒体上传输比特0和1的问题，主要有四个任务：机械特性、电器特性、功能特性、过程特性。</p>
@@ -170,7 +170,7 @@
   </entry>
   <entry>
     <title>计算机网络概述</title>
-    <url>/GameWill.github.io/2021/12/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/</url>
+    <url>/GameWill.github.io/2021/11/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/</url>
     <content><![CDATA[<hr>
 <blockquote>
 <p>计算机网络已由一种通信基础设施发展成为一种重要的信息服务基础设施。已经像水、电、煤气这些设施一样，成为我们生活中不可或缺的一部分。</p>
